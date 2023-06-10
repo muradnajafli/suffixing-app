@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,10 +37,6 @@ public class LoggerUtil {
         logWarning("No files are configured to be copied/moved");
     }
 
-    public static void logNoSuchFile(String filepath) {
-        logSevere("No such file: " + filepath.replace('\\','/'));
-    }
-
     public static void logMoveFile(String sourceFile, String destinationFile) {
         logInfo(sourceFile.replace('\\', '/') + " => " + destinationFile.replace('\\', '/'));
     }
@@ -49,14 +44,4 @@ public class LoggerUtil {
     public static void logCopyFile(String sourceFile, String destinationFile) {
         logInfo(sourceFile.replace('\\', '/') + " -> " + destinationFile.replace('\\', '/'));
     }
-
-
-    public static void logCopyFile(String sourceFile1, String destinationFile1,
-                                   String sourceFile2, String destinationFile2) {
-        logInfo(sourceFile1.replace('\\', '/') + " -> " + destinationFile1.replace('\\', '/'));
-        logInfo(sourceFile2.replace('\\', '/') + " -> " + destinationFile2.replace('\\', '/'));
-    }
-    }
-
-
-
+}
